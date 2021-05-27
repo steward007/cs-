@@ -6,7 +6,7 @@ https://zhuanlan.zhihu.com/p/129901896
 
 ## 微信机器人版本(自行替换dt_token为对应机器人的值)：
 
-'''
+```
 $dt_token = "aaaaaa";
 $dt_bot_webhookURL = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key='.$dt_token;
 $targetInfo_txt = "## 有主机上线！\n>";
@@ -26,9 +26,10 @@ on beacon_initial {
     @curl_command = @('curl', '-H', 'Content-Type: application/json', '-d', $dt_msg, $dt_bot_webhookURL);
     exec(@curl_command);
 }
-'''
+```
+
 ## 钉钉版本(自行替换dt_token为对应机器人的值)：
-'''
+```
 $dt_token = "bbbbbb";
 $dt_bot_webhookURL = 'https://oapi.dingtalk.com/robot/send?access_token='.$dt_token;
 $targetInfo_txt = "## 有主机上线！\n>";
@@ -48,4 +49,4 @@ on beacon_initial {
     @curl_command = @('curl', '-H', 'Content-Type: application/json', '-d', $dt_msg, $dt_bot_webhookURL);
     exec(@curl_command);
 }
-'''
+```
